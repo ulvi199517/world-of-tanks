@@ -1,5 +1,22 @@
 .sign-in {
-    width: 30vw;
+    width: 380px;
     display: flex;
     flex-direction: column;
+    
+    & .title {
+        display: flex;
+        justify-content: center;
+    }
+    & .subtitle {
+        display: flex;
+        justify-content: center;
+    }
+    & .divider {
+        font-size: large;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
 }
