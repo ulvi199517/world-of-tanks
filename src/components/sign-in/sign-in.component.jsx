@@ -1,8 +1,14 @@
 import React from 'react';
 import './sign-in.styles.scss';
+import {FaFacebook, FaGoogle, FaEnvelope, FaGithub} from 'react-icons/fa';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
-import {signInWithFacebook, signInWithGoogle} from '../../firebase/firebase.utils';
+import {
+        auth, 
+        signInWithGoogle,
+        signInWithFacebook,
+        signInWithGithub
+    } from '../../firebase/firebase.utils';
 
 class SignIn extends React.Component {
     constructor(props){
@@ -13,10 +19,15 @@ class SignIn extends React.Component {
             password: ''
         }
     }
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
-
-        this.setState({email: '', password: ''});
+        const {email, password} = this.state;
+        try{
+            await auth.signInWithEmailAndPassword(email, password);
+            this.setState({email: '', password: ''});
+        }catch(error){
+            console.log(error);
+        }
     }
     handleChange = event => {
         const {value, name} = event.target;
@@ -45,10 +56,11 @@ class SignIn extends React.Component {
                         handleChange={this.handleChange}
                         required 
                     />
-                    <CustomButton type='submit'> Sign in</CustomButton>
+                    <CustomButton type='submit'><FaEnvelope className='envelope-icon'/> Sign in</CustomButton>
                     <span className='divider'>or</span>
-                    <CustomButton onClick={signInWithGoogle} isGoogleSignIn> Sign in Google</CustomButton>
-                    <CustomButton onClick={signInWithFacebook} isFacebookSignIn> Sign in Facebook</CustomButton>
+                    <CustomButton onClick={signInWithGoogle} isGoogleSignIn><FaGoogle className='google-icon'/> Sign in with Google</CustomButton>
+                    <CustomButton onClick={signInWithFacebook} isFacebookSignIn><FaFacebook className='facebook-icon'/> Sign in with Facebook</CustomButton>
+                    <CustomButton onClick={signInWithGithub} isGithubSignIn><FaGithub className='github-icon'/> Sign in with Github</CustomButton>
                 </form>
             </div>
         );
