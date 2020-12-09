@@ -66,49 +66,49 @@ const SHOP_DATA = [
       routeName: 'germany',
       items: [
         {
-          id: 1,
+          id: 10,
           name: 'E-75',
           imageUrl: 'https://i.ibb.co/pxdcr1N/E-75.png',
           price: 220
         },
         {
-          id: 2,
+          id: 11,
           name: 'Grille-15',
           imageUrl: 'https://i.ibb.co/BNXvPs8/Grille-15.png',
           price: 280
         },
         {
-          id: 3,
+          id: 12,
           name: 'Jagd-Pzanzer-E100',
           imageUrl: 'https://i.ibb.co/jbDQTFF/Jagd-Pzanzer-E100.png',
           price: 110
         },
         {
-          id: 4,
+          id: 13,
           name: 'Lowe-Black',
           imageUrl: 'https://i.ibb.co/THt6P6G/Lowe-Black.png',
           price: 160
         },
         {
-          id: 5,
+          id: 14,
           name: 'Rhm-Borsig-Waffentrager',
           imageUrl: 'https://i.ibb.co/mTf5mLd/Rhm-Borsig-Waffentrager.png',
           price: 160
         },
         {
-          id: 6,
+          id: 15,
           name: 'Tiger-131',
           imageUrl: 'https://i.ibb.co/980SCBf/Tiger-131.png',
           price: 160
         },
         {
-          id: 7,
+          id: 16,
           name: 'Waffentrager-E100',
           imageUrl: 'https://i.ibb.co/qWQZ06p/Waffentrager-E100.png',
           price: 190
         },
         {
-          id: 8,
+          id: 17,
           name: 'Maus',
           imageUrl: 'https://i.ibb.co/5GQXf07/Maus.png',
           price: 200
@@ -121,31 +121,31 @@ const SHOP_DATA = [
       routeName: 'uk',
       items: [
         {
-          id: 1,
+          id: 18,
           name: 'Centurion-Action-X',
           imageUrl: 'https://i.ibb.co/0QhQjvJ/Centurion-Action-X.png',
           price: 125
         },
         {
-          id: 2,
+          id: 19,
           name: 'Churchill-I',
           imageUrl: 'https://i.ibb.co/Xb2D6Pf/Churchill-I.png',
           price: 90
         },
         {
-          id: 3,
+          id: 20,
           name: 'Cromwell-Knight',
           imageUrl: 'https://i.ibb.co/x3fkk7V/Cromwell-Knight.png',
           price: 90
         },
         {
-          id: 4,
+          id: 21,
           name: 'FV215b',
           imageUrl: 'https://i.ibb.co/vkYMWcT/FV215b.png',
           price: 165
         },
         {
-          id: 5,
+          id: 22,
           name: 'Super-Conqueror',
           imageUrl: 'https://i.ibb.co/JBvgzNp/Super-Conqueror.png',
           price: 185
@@ -158,43 +158,43 @@ const SHOP_DATA = [
       routeName: 'usa',
       items: [
         {
-          id: 1,
+          id: 23,
           name: 'AE-Phase-1',
           imageUrl: 'https://i.ibb.co/80jTw9V/AE-Phase-1.png',
           price: 25
         },
         {
-          id: 2,
+          id: 24,
           name: 'M41-Bulldog',
           imageUrl: 'https://i.ibb.co/0c3tkVj/M41-Bulldog.png',
           price: 20
         },
         {
-          id: 3,
+          id: 25,
           name: 'M46-Patton',
           imageUrl: 'https://i.ibb.co/0Q5dMsn/M46-Patton.png',
           price: 80
         },
         {
-          id: 4,
+          id: 26,
           name: 'M48-A2-Patton',
           imageUrl: 'https://i.ibb.co/1sMnvCp/M48-A2-Patton.png',
           price: 80
         },
         {
-          id: 5,
+          id: 27,
           name: 'T28',
           imageUrl: 'https://i.ibb.co/hXHC1Q6/T28.png',
           price: 45
         },
         {
-          id: 6,
+          id: 28,
           name: 'T69',
           imageUrl: 'https://i.ibb.co/VHf16vj/T69.png',
           price: 135
         },
         {
-          id: 7,
+          id: 29,
           name: 'T95-E6',
           imageUrl: 'https://i.ibb.co/YXFjkmn/T95-E6.png',
           price: 20
@@ -207,37 +207,37 @@ const SHOP_DATA = [
       routeName: 'france',
       items: [
         {
-          id: 1,
+          id: 30,
           name: 'AMX-13-105',
           imageUrl: 'https://i.ibb.co/4j5w1Vn/AMX-13-105.png',
           price: 325
         },
         {
-          id: 2,
+          id: 31,
           name: 'AMX-30',
           imageUrl: 'https://i.ibb.co/rGzMF9J/AMX-30.png',
           price: 20
         },
         {
-          id: 3,
+          id: 32,
           name: 'AMX-Chasseur-de-char-46',
           imageUrl: 'https://i.ibb.co/dK0Lr5R/AMX-Chasseur-de-char-46.png',
           price: 25
         },
         {
-          id: 4,
+          id: 33,
           name: 'AMX50-Foch',
           imageUrl: 'https://i.ibb.co/0hjcnch/AMX50-Foch.png',
           price: 25
         },
         {
-          id: 5,
+          id: 34,
           name: 'Batignolles-Chatillon-12t',
           imageUrl: 'https://i.ibb.co/X8SXPpz/Batignolles-Chatillon-12t.png',
           price: 40
         },
         {
-          id: 6,
+          id: 35,
           name: 'Char-de-65t',
           imageUrl: 'https://i.ibb.co/fGVzXk3/Char-de-65t.png',
           price: 25
