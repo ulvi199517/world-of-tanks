@@ -16,7 +16,10 @@
       .header-block {
         text-transform: capitalize;
         width: 23%;
-  
+        
+        &:first-child{
+          padding-left: 5%;
+        }
         &:last-child {
           width: 8%;
         }
@@ -29,7 +32,7 @@
       font-size: 36px;
     }
     .empty-checkout {
-        margin: 40px 0;
+        margin: 40px;
         font-size: 40px;
         display: flex;
         text-align: center;
