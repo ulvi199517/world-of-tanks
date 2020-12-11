@@ -1,5 +1,5 @@
-const SHOP_DATA = [
-    {
+const SHOP_DATA = {
+    ussr: {
       id: 1,
       title: 'U.S.S.R',
       routeName: 'ussr',
@@ -60,7 +60,7 @@ const SHOP_DATA = [
         }
       ]
     },
-    {
+    germany: {
       id: 2,
       title: 'Germany',
       routeName: 'germany',
@@ -115,7 +115,7 @@ const SHOP_DATA = [
         }
       ]
     },
-    {
+    uk: {
       id: 3,
       title: 'U.K',
       routeName: 'uk',
@@ -152,7 +152,7 @@ const SHOP_DATA = [
         }
       ]
     },
-    {
+    usa: {
       id: 4,
       title: 'U.S.A',
       routeName: 'usa',
@@ -201,7 +201,7 @@ const SHOP_DATA = [
         }
       ]
     },
-    {
+    france: {
       id: 5,
       title: 'France',
       routeName: 'france',
@@ -244,5 +244,5 @@ const SHOP_DATA = [
         }
       ]
     }
-  ]
+}
   export default SHOP_DATA;
