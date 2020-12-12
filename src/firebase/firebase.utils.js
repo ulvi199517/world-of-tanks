@@ -41,7 +41,21 @@ const config = {
     })
     return await batch.commit();
   }
-
+export const convertCollectionsSnapshotToMap = collections => {
+    const transformedCollection = collections.docs.map(docSnapshot => {
+        const {title, items} = docSnapshot.data();
+        return {
+            routeName: encodeURI(title.toLowerCase()),
+            id: docSnapshot.id,
+            title,
+            items
+        };
+    });
+    return transformedCollection.reduce((accumulator, collection) => {
+        accumulator[collection.title.toLowerCase()] = collection;
+        return accumulator;
+    }, {});
+};
 
 firebase.initializeApp(config);
 

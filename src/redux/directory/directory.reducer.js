@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
     sections: [
         {
-            title: 'ussr',
+            title: 'u.s.s.r',
             imageUrl: 'https://i.ibb.co/mSB9P1g/sssr-flag-svg.png',
             id: 1,
             linkUrl: 'shop/ussr'
