@@ -3,12 +3,15 @@ import './collection.styles.scss';
 import CollectionItem from '../../components/collection-item/collection-item.component';
 import {selectCollection} from '../../redux/shop/shop.selectors';
 import {connect} from 'react-redux';
-
-const CollectionPage = ({collection}) => {
+import {Link} from 'react-router-dom';
+const CollectionPage = ({collection, history, match}) => {
     const {title, items} = collection;
     return(
         <div className='collection-page'>
-            <h2 className='title'>{title}</h2>
+            <div className='top'>
+                <Link to='/shop' className='back-to-shop'> &#8678; </Link>
+                <h2 className='title'>{title}</h2>
+            </div>
             <div className='items'>
                 {
                     items.map(item => 
