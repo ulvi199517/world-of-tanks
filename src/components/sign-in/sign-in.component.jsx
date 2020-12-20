@@ -4,11 +4,12 @@ import {FaFacebook, FaGoogle, FaEnvelope, FaGithub} from 'react-icons/fa';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import {
-        auth, 
-        signInWithGoogle,
-        signInWithFacebook,
-        signInWithGithub
-    } from '../../firebase/firebase.utils';
+        googleSignInStart, 
+        emailSignInStart,
+        facebookSignInStart,
+        githubSignInStart
+    } from '../../redux/user/user.actions';
+import {connect} from 'react-redux';
 
 class SignIn extends React.Component {
     constructor(props){
@@ -22,12 +23,8 @@ class SignIn extends React.Component {
     handleSubmit = async event => {
         event.preventDefault();
         const {email, password} = this.state;
-        try{
-            await auth.signInWithEmailAndPassword(email, password);
-            this.setState({email: '', password: ''});
-        }catch(error){
-            console.log(error);
-        }
+        const {emailSignInStart} = this.props;
+        emailSignInStart(email, password);
     }
     handleChange = event => {
         const {value, name} = event.target;
@@ -35,6 +32,7 @@ class SignIn extends React.Component {
         this.setState({ [name]: value})
     }
     render(){
+        const {googleSignInStart, facebookSignInStart, githubSignInStart} = this.props;
         return(
             <div className='sign-in'>
                 <h2 className='title'>I already have an account</h2>
@@ -58,12 +56,19 @@ class SignIn extends React.Component {
                     />
                     <CustomButton type='submit'><FaEnvelope className='envelope-icon'/> Sign in</CustomButton>
                     <span className='divider'>or</span>
-                    <CustomButton onClick={signInWithGoogle} isGoogleSignIn><FaGoogle className='google-icon'/> Sign in with Google</CustomButton>
-                    <CustomButton onClick={signInWithFacebook} isFacebookSignIn><FaFacebook className='facebook-icon'/> Sign in with Facebook</CustomButton>
-                    <CustomButton onClick={signInWithGithub} isGithubSignIn><FaGithub className='github-icon'/> Sign in with Github</CustomButton>
+                    <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn><FaGoogle className='google-icon'/> Sign in with Google</CustomButton>
+                    <CustomButton type='button' onClick={facebookSignInStart} isFacebookSignIn><FaFacebook className='facebook-icon'/> Sign in with Facebook</CustomButton>
+                    <CustomButton type='button' onClick={githubSignInStart} isGithubSignIn><FaGithub className='github-icon'/> Sign in with Github</CustomButton>
                 </form>
             </div>
         );
     }
 }
-export default SignIn;
+const mapDispatchToProps = dispatch => ({
+    googleSignInStart: () => dispatch(googleSignInStart()),
+    emailSignInStart: (email, password) => dispatch(emailSignInStart({email, password})),
+    facebookSignInStart: () => dispatch(facebookSignInStart()),
+    githubSignInStart: () => dispatch(githubSignInStart())
+
+})
+export default connect(null, mapDispatchToProps)(SignIn);
