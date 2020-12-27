@@ -25,3 +25,9 @@
         margin: 50px auto;
     }
 }
+@media screen and (max-width: 800px){
+    .cart-dropdown{
+        width: 220px;
+        padding: 10px;
+    }
+}

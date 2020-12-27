@@ -24,3 +24,22 @@
         }
     }
 }
+@media screen and (max-width: 800px) {
+    .collection-page{
+        align-items: center;
+        
+        .top {
+            width: 80vw;
+
+            .back-to-shop{
+                justify-self: left;
+            }
+        }
+            
+        .items{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+    }
+}

@@ -62,3 +62,18 @@
         }
     }
 }
+@media screen and (max-width: 800px) {
+    .menu-item{
+        min-width: 44%;
+        height: 150px;
+
+        .content{
+            height: 70px;
+            padding: 0 15px;
+        }
+
+        &:last-child{
+            height: 150px;
+        }
+    }
+  }
