@@ -90,4 +90,13 @@
       }
     }
   }
+  @media screen and (max-width: 800px){
+    .custom-button:disabled {
+      cursor: not-allowed;
+      pointer-events: all;
+      background-color: #a1a1a1;
+      color: white;
+      border: 1px solid white;
+    }
+  }
   
